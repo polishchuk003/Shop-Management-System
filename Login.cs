@@ -49,7 +49,8 @@ namespace Shop_Management_System
             item.Name = textBox1.Text;
             item.Price = int.Parse(textBox2.Text);
             item.Stock = int.Parse(textBox3.Text);
-            //comboBox1.Text = item.Category.Name;
+            item.CategoryId.Name = comboBox1.Text;
+           // comboBox1.Text = item.Category.Name;
             item.Manufacturer = textBox4.Text;
 
             _db.Items.Add(item);

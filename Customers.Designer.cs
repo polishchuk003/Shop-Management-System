@@ -216,7 +216,7 @@
             this.button3.ForeColor = System.Drawing.Color.Chocolate;
             this.button3.Location = new System.Drawing.Point(681, 365);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(82, 31);
+            this.button3.Size = new System.Drawing.Size(100, 31);
             this.button3.TabIndex = 39;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = true;
@@ -228,7 +228,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(111, 31);
             this.button2.TabIndex = 38;
-            this.button2.Text = "Add Item";
+            this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
@@ -294,9 +294,9 @@
             this.label6.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.Location = new System.Drawing.Point(362, 193);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 21);
+            this.label6.Size = new System.Drawing.Size(56, 21);
             this.label6.TabIndex = 27;
-            this.label6.Text = "Item";
+            this.label6.Text = "Name";
             // 
             // panel2
             // 

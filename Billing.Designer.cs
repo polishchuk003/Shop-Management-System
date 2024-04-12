@@ -332,9 +332,9 @@
             this.label5.Font = new System.Drawing.Font("Yu Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.Location = new System.Drawing.Point(236, 28);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(401, 35);
+            this.label5.Size = new System.Drawing.Size(417, 35);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Shop Managment System 2.0";
+            this.label5.Text = "Shop Management System 2.0";
             // 
             // pictureBox5
             // 

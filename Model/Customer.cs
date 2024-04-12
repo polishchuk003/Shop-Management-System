@@ -12,6 +12,7 @@ namespace Shop_Management_System.Model
         public string Name { get; set; }
         public string Gender { get; set; }
         public string Phone { get; set; }
+        public List<Bill> Bills { get; set; }
 
     }
 }

@@ -173,6 +173,7 @@
             this.label10.Size = new System.Drawing.Size(54, 21);
             this.label10.TabIndex = 10;
             this.label10.Text = "Items";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // pictureBox7
             // 
@@ -203,6 +204,7 @@
             this.button2.TabIndex = 52;
             this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -284,6 +286,7 @@
             this.label3.Size = new System.Drawing.Size(60, 21);
             this.label3.TabIndex = 6;
             this.label3.Text = "Billing";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pictureBox4
             // 
@@ -314,6 +317,7 @@
             this.label2.Size = new System.Drawing.Size(85, 21);
             this.label2.TabIndex = 4;
             this.label2.Text = "Customer";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel1
             // 
@@ -342,9 +346,9 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Categories";
             this.Text = "Category";
+            this.Load += new System.EventHandler(this.Categories_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();

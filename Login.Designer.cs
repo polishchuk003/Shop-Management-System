@@ -42,7 +42,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.customerLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -97,6 +97,7 @@
             this.label11.Size = new System.Drawing.Size(21, 21);
             this.label11.TabIndex = 13;
             this.label11.Text = "X";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label5
             // 
@@ -129,7 +130,7 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.customerLabel);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox2);
@@ -148,6 +149,7 @@
             this.label10.Size = new System.Drawing.Size(54, 21);
             this.label10.TabIndex = 10;
             this.label10.Text = "Items";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // pictureBox7
             // 
@@ -198,6 +200,7 @@
             this.label3.Size = new System.Drawing.Size(60, 21);
             this.label3.TabIndex = 6;
             this.label3.Text = "Billing";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pictureBox4
             // 
@@ -219,15 +222,16 @@
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
             // 
-            // label2
+            // customerLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(105, 199);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 21);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Customer";
+            this.customerLabel.AutoSize = true;
+            this.customerLabel.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.customerLabel.Location = new System.Drawing.Point(105, 199);
+            this.customerLabel.Name = "customerLabel";
+            this.customerLabel.Size = new System.Drawing.Size(85, 21);
+            this.customerLabel.TabIndex = 4;
+            this.customerLabel.Text = "Customer";
+            this.customerLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox1
             // 
@@ -248,6 +252,7 @@
             this.label1.Size = new System.Drawing.Size(92, 21);
             this.label1.TabIndex = 2;
             this.label1.Text = "Categories";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox2
             // 
@@ -295,6 +300,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 11;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -332,7 +338,7 @@
             // 
             this.textBox4.Location = new System.Drawing.Point(537, 305);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.Size = new System.Drawing.Size(143, 20);
             this.textBox4.TabIndex = 17;
             // 
             // label13
@@ -364,6 +370,7 @@
             this.button2.TabIndex = 19;
             this.button2.Text = "Add Item";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -427,9 +434,10 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -464,7 +472,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label customerLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;

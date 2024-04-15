@@ -114,6 +114,7 @@
             this.label10.Size = new System.Drawing.Size(54, 21);
             this.label10.TabIndex = 10;
             this.label10.Text = "Items";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // pictureBox7
             // 
@@ -194,6 +195,7 @@
             this.label2.Size = new System.Drawing.Size(85, 21);
             this.label2.TabIndex = 4;
             this.label2.Text = "Customer";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox1
             // 
@@ -214,6 +216,7 @@
             this.label1.Size = new System.Drawing.Size(92, 21);
             this.label1.TabIndex = 2;
             this.label1.Text = "Categories";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label15
             // 
@@ -481,7 +484,6 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Billing";
             this.Text = "Billing";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();

@@ -91,6 +91,7 @@
             this.label10.Size = new System.Drawing.Size(54, 21);
             this.label10.TabIndex = 10;
             this.label10.Text = "Items";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // pictureBox7
             // 
@@ -121,6 +122,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox6.TabIndex = 9;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // label4
             // 
@@ -141,6 +143,7 @@
             this.label3.Size = new System.Drawing.Size(60, 21);
             this.label3.TabIndex = 6;
             this.label3.Text = "Billing";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pictureBox4
             // 
@@ -191,6 +194,7 @@
             this.label1.Size = new System.Drawing.Size(92, 21);
             this.label1.TabIndex = 2;
             this.label1.Text = "Categories";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label15
             // 
@@ -230,6 +234,7 @@
             this.button2.TabIndex = 38;
             this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -330,6 +335,7 @@
             this.label11.Size = new System.Drawing.Size(21, 21);
             this.label11.TabIndex = 13;
             this.label11.Text = "X";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label5
             // 
@@ -389,9 +395,9 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Customers";
             this.Text = "Customers";
+            this.Load += new System.EventHandler(this.Customers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

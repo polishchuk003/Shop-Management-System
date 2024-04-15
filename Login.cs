@@ -59,7 +59,7 @@ namespace Shop_Management_System
             if (categoryName != null)
             {
                 // Шукаємо категорію за назвою в базі даних або створюємо нову, якщо її не знайдено
-                Category category = _db.Categories.Single(c => c.Name == categoryName);
+                var category = _db.Categories.Single(c => c.Name == categoryName);
                 //if (category == null)
                 //{
                 //    category = new Category() { Name = categoryName };

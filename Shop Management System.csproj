@@ -180,6 +180,10 @@
     <Compile Include="Migrations\202404151303169_changeCaterory.designer.cs">
       <DependentUpon>202404151303169_changeCaterory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202404151940240_newDB.cs" />
+    <Compile Include="Migrations\202404151940240_newDB.designer.cs">
+      <DependentUpon>202404151940240_newDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Bill.cs" />
     <Compile Include="Model\Category.cs" />
@@ -207,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202404151303169_changeCaterory.resx">
       <DependentUpon>202404151303169_changeCaterory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404151940240_newDB.resx">
+      <DependentUpon>202404151940240_newDB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

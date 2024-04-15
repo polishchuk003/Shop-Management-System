@@ -15,6 +15,8 @@ namespace Shop_Management_System.Model
         public int Stock { get; set; }
         public string Manufacturer { get; set; }
 
+        
+
 
 
     }

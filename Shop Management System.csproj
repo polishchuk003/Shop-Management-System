@@ -155,6 +155,11 @@
       <DependentUpon>Customers.cs</DependentUpon>
     </Compile>
     <Compile Include="DBContext\DataDbContext.cs" />
+    <Compile Include="HardwareShopDB23DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HardwareShopDB23DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +218,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="appsettings.json" />
+    <None Include="HardwareShopDB23DataSet.xsc">
+      <DependentUpon>HardwareShopDB23DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HardwareShopDB23DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HardwareShopDB23DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HardwareShopDB23DataSet.xss">
+      <DependentUpon>HardwareShopDB23DataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

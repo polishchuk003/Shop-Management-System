@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Migrations;
 using System.Drawing;
 using System.Linq;
 using System.Management;
@@ -25,8 +26,9 @@ namespace Shop_Management_System
         private void Login_Load(object sender, EventArgs e)
         {
             LoadComboBoxItems();
-            //comboBox1.DataSource = _db.Categories.ToList();
+
             dataGridView2.DataSource = _db.Items.ToList();
+
 
         }
         private void LoadComboBoxItems()
@@ -51,15 +53,32 @@ namespace Shop_Management_System
             item.Price = int.Parse(textBox2.Text);
             item.Stock = int.Parse(textBox3.Text);
 
-            item.Category = new Category();
-            item.Category.Name = comboBox1.SelectedIndex.ToString();
+            string categoryName = comboBox1.SelectedItem?.ToString();
 
-            //var selectedCategory = comboBox1.SelectedItem as Category;
-            //if (selectedCategory != null)
-            //{
-            //    // Присвоєння вибраної категорії до елемента
-            //    item.Category = selectedCategory;
-            //}
+
+            if (categoryName != null)
+            {
+                // Шукаємо категорію за назвою в базі даних або створюємо нову, якщо її не знайдено
+                Category category = _db.Categories.Single(c => c.Name == categoryName);
+                //if (category == null)
+                //{
+                //    category = new Category() { Name = categoryName };
+                //    _db.Categories.Add(category);
+                //}
+
+                // Присвоюємо категорію до елемента
+                item.Category = category;
+            }
+
+            //item.Category = new Category();
+            //item.Category.Name = comboBox1.SelectedIndex.ToString();
+
+            ////var selectedCategory = comboBox1.SelectedItem as Category;
+            ////if (selectedCategory != null)
+            ////{
+            ////    // Присвоєння вибраної категорії до елемента
+            ////    item.Category = selectedCategory;
+            ////}
 
             item.Manufacturer = textBox4.Text;
 
@@ -118,7 +137,7 @@ namespace Shop_Management_System
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Item selectedItem = dataGridView2.CurrentRow.DataBoundItem as Item;
+            var selectedItem = dataGridView2.CurrentRow.DataBoundItem as Item;
 
             if (selectedItem != null)
             {
@@ -132,6 +151,44 @@ namespace Shop_Management_System
             {
                 MessageBox.Show("Не вибрано жодного елемента для видалення.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var selectedItemForEdit = dataGridView2.CurrentRow.DataBoundItem as Item;
+
+            if (selectedItemForEdit != null)
+            {
+                selectedItemForEdit.Name = textBox1.Text;
+                selectedItemForEdit.Price = int.Parse(textBox2.Text);
+                selectedItemForEdit.Stock = int.Parse(textBox3.Text);
+
+                selectedItemForEdit.Category.Name = comboBox1.SelectedIndex.ToString();
+
+                //var selectedCategory = comboBox1.SelectedItem as Category;
+                //if (selectedCategory != null)
+                //{
+                //    // Присвоєння вибраної категорії до елемента
+                //    item.Category = selectedCategory;
+                //}
+
+                selectedItemForEdit.Manufacturer = textBox4.Text;
+
+                _db.Items.AddOrUpdate(selectedItemForEdit);
+                _db.SaveChanges();
+
+                dataGridView2.DataSource = _db.Items.ToList();
+
+            }
+            else
+            {
+                MessageBox.Show("Не вибрано жодного елемента для видалення.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

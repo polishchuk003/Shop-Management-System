@@ -39,11 +39,22 @@ namespace Shop_Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var mainWindow = new Login();
-            mainWindow.Show();
-            this.Hide();
+            if (LoginTextBox.Text == "" || PasswordTextBox.Text == "")
+            {
+                MessageBox.Show("Midding data!!!!");
+            }
+            else if (LoginTextBox.Text == "1" || PasswordTextBox.Text == "1")
+            {
+                var mainWindow = new Login();
+                mainWindow.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Wrong data!!!!");
+            }
         }
 
-        
+
     }
 }

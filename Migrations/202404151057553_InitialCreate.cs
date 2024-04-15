@@ -43,11 +43,11 @@
                         Price = c.Int(nullable: false),
                         Stock = c.Int(nullable: false),
                         Manufacturer = c.String(),
-                        Category_CategoryId = c.Int(),
+                        CategoryName_CategoryId = c.Int(),
                     })
                 .PrimaryKey(t => t.ItemId)
-                .ForeignKey("dbo.Categories", t => t.Category_CategoryId)
-                .Index(t => t.Category_CategoryId);
+                .ForeignKey("dbo.Categories", t => t.CategoryName_CategoryId)
+                .Index(t => t.CategoryName_CategoryId);
             
             CreateTable(
                 "dbo.Categories",
@@ -55,6 +55,7 @@
                     {
                         CategoryId = c.Int(nullable: false, identity: true),
                         Name = c.String(),
+                        Description = c.String(),
                     })
                 .PrimaryKey(t => t.CategoryId);
             
@@ -63,9 +64,9 @@
         public override void Down()
         {
             DropForeignKey("dbo.Bills", "Item_ItemId", "dbo.Items");
-            DropForeignKey("dbo.Items", "Category_CategoryId", "dbo.Categories");
+            DropForeignKey("dbo.Items", "CategoryName_CategoryId", "dbo.Categories");
             DropForeignKey("dbo.Bills", "Customer_CustomerId", "dbo.Customers");
-            DropIndex("dbo.Items", new[] { "Category_CategoryId" });
+            DropIndex("dbo.Items", new[] { "CategoryName_CategoryId" });
             DropIndex("dbo.Bills", new[] { "Item_ItemId" });
             DropIndex("dbo.Bills", new[] { "Customer_CustomerId" });
             DropTable("dbo.Categories");

@@ -25,6 +25,7 @@ namespace Shop_Management_System
         private void Login_Load(object sender, EventArgs e)
         {
             LoadComboBoxItems();
+            //comboBox1.DataSource = _db.Categories.ToList();
             dataGridView2.DataSource = _db.Items.ToList();
 
         }
@@ -33,7 +34,7 @@ namespace Shop_Management_System
             // Отримуємо всі категорії з бази даних і додаємо їх до Items у comboBox1
             foreach (var category in _db.Categories.ToList())
             {
-                comboBox1.Items.Add(category.Name); // Додаємо об'єкт категорії до випадаючого списку
+               comboBox1.Items.Add(category.Name); // Додаємо об'єкт категорії до випадаючого списку
             }
         }
 
@@ -45,21 +46,29 @@ namespace Shop_Management_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-
             var item = new Item();
             item.Name = textBox1.Text;
             item.Price = int.Parse(textBox2.Text);
             item.Stock = int.Parse(textBox3.Text);
-            item.CategoryId.Name = comboBox1.Text;
-           // comboBox1.Text = item.Category.Name;
+
+            item.Category = new Category();
+            item.Category.Name = comboBox1.SelectedIndex.ToString();
+
+            //var selectedCategory = comboBox1.SelectedItem as Category;
+            //if (selectedCategory != null)
+            //{
+            //    // Присвоєння вибраної категорії до елемента
+            //    item.Category = selectedCategory;
+            //}
+
             item.Manufacturer = textBox4.Text;
 
             _db.Items.Add(item);
             _db.SaveChanges();
 
             dataGridView2.DataSource = _db.Items.ToList();
-
         }
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -105,6 +114,24 @@ namespace Shop_Management_System
         private void Form_Clodes(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Item selectedItem = dataGridView2.CurrentRow.DataBoundItem as Item;
+
+            if (selectedItem != null)
+            {
+                _db.Items.Remove(selectedItem);
+                _db.SaveChanges();
+
+                // Оновлюємо DataGridView
+                dataGridView2.DataSource = _db.Items.ToList();
+            }
+            else
+            {
+                MessageBox.Show("Не вибрано жодного елемента для видалення.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

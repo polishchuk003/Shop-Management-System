@@ -61,5 +61,23 @@ namespace Shop_Management_System
             dataGridView2.DataSource = _db.Categories.ToList();
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var selectedCategory = dataGridView2.CurrentRow.DataBoundItem as Category;
+
+            if (selectedCategory != null)
+            {
+                _db.Categories.Remove(selectedCategory);
+                _db.SaveChanges();
+
+                // Оновлюємо DataGridView
+                dataGridView2.DataSource = _db.Categories.ToList();
+            }
+            else
+            {
+                MessageBox.Show("Не вибрано жодного елемента для видалення.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

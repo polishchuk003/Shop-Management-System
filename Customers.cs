@@ -84,5 +84,23 @@ namespace Shop_Management_System
             startWindow.ShowDialog();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var selectedCustomer = dataGridView2.CurrentRow.DataBoundItem as Customer;
+
+            if (selectedCustomer != null)
+            {
+                _db.Customers.Remove(selectedCustomer);
+                _db.SaveChanges();
+
+                // Оновлюємо DataGridView
+                dataGridView2.DataSource = _db.Customers.ToList();
+            }
+            else
+            {
+                MessageBox.Show("Не вибрано жодного елемента для видалення.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

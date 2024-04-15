@@ -167,17 +167,13 @@
     <Compile Include="MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202404121029127_InitialCreate.cs" />
-    <Compile Include="Migrations\202404121029127_InitialCreate.designer.cs">
-      <DependentUpon>202404121029127_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\202404151057553_InitialCreate.cs" />
+    <Compile Include="Migrations\202404151057553_InitialCreate.designer.cs">
+      <DependentUpon>202404151057553_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202404121405376_last12.04.cs" />
-    <Compile Include="Migrations\202404121405376_last12.04.designer.cs">
-      <DependentUpon>202404121405376_last12.04.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202404121445053_second.cs" />
-    <Compile Include="Migrations\202404121445053_second.designer.cs">
-      <DependentUpon>202404121445053_second.cs</DependentUpon>
+    <Compile Include="Migrations\202404151303169_changeCaterory.cs" />
+    <Compile Include="Migrations\202404151303169_changeCaterory.designer.cs">
+      <DependentUpon>202404151303169_changeCaterory.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Bill.cs" />
@@ -201,14 +197,11 @@
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202404121029127_InitialCreate.resx">
-      <DependentUpon>202404121029127_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202404151057553_InitialCreate.resx">
+      <DependentUpon>202404151057553_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202404121405376_last12.04.resx">
-      <DependentUpon>202404121405376_last12.04.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202404121445053_second.resx">
-      <DependentUpon>202404121445053_second.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202404151303169_changeCaterory.resx">
+      <DependentUpon>202404151303169_changeCaterory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

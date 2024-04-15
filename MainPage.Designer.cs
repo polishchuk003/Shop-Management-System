@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.LoginTextBox = new System.Windows.Forms.TextBox();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -40,7 +40,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.LoginButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -51,19 +51,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // LoginTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(252, 127);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 20);
-            this.textBox1.TabIndex = 1;
+            this.LoginTextBox.Location = new System.Drawing.Point(252, 127);
+            this.LoginTextBox.Name = "LoginTextBox";
+            this.LoginTextBox.Size = new System.Drawing.Size(182, 20);
+            this.LoginTextBox.TabIndex = 1;
             // 
-            // textBox2
+            // PasswordTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(252, 186);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(182, 20);
-            this.textBox2.TabIndex = 3;
+            this.PasswordTextBox.Location = new System.Drawing.Point(252, 186);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.Size = new System.Drawing.Size(182, 20);
+            this.PasswordTextBox.TabIndex = 3;
             // 
             // label2
             // 
@@ -162,16 +162,16 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // LoginButton
             // 
-            this.button1.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(304, 230);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 31);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.LoginButton.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LoginButton.Location = new System.Drawing.Point(304, 230);
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.Size = new System.Drawing.Size(82, 31);
+            this.LoginButton.TabIndex = 10;
+            this.LoginButton.Text = "Login";
+            this.LoginButton.UseVisualStyleBackColor = true;
+            this.LoginButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -200,12 +200,12 @@
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(516, 320);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.LoginTextBox);
             this.Controls.Add(this.label1);
             this.Name = "MainPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -224,8 +224,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox LoginTextBox;
+        private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
@@ -234,7 +234,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;

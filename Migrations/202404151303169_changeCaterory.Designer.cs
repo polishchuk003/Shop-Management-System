@@ -7,13 +7,13 @@ namespace Shop_Management_System.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class last1204 : IMigrationMetadata
+    public sealed partial class changeCaterory : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(last1204));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(changeCaterory));
         
         string IMigrationMetadata.Id
         {
-            get { return "202404121405376_last12.04"; }
+            get { return "202404151303169_changeCaterory"; }
         }
         
         string IMigrationMetadata.Source

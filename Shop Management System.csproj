@@ -175,6 +175,10 @@
     <Compile Include="Migrations\202404121405376_last12.04.designer.cs">
       <DependentUpon>202404121405376_last12.04.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202404121445053_second.cs" />
+    <Compile Include="Migrations\202404121445053_second.designer.cs">
+      <DependentUpon>202404121445053_second.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Bill.cs" />
     <Compile Include="Model\Category.cs" />
@@ -202,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202404121405376_last12.04.resx">
       <DependentUpon>202404121405376_last12.04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404121445053_second.resx">
+      <DependentUpon>202404121445053_second.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

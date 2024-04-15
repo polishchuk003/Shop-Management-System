@@ -40,6 +40,7 @@ namespace Shop_Management_System
         private void label11_Click(object sender, EventArgs e)
         {
             this.Close();
+            Application.Exit();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -99,6 +100,11 @@ namespace Shop_Management_System
             billingWindow.StartPosition = FormStartPosition.CenterScreen;
             billingWindow.ShowDialog();
             this.Hide();
+        }
+
+        private void Form_Clodes(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

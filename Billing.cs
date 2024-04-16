@@ -1,16 +1,8 @@
 ﻿using Shop_Management_System.DBContext;
 using Shop_Management_System.Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data.Entity.Migrations;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Shop_Management_System
 {
@@ -57,10 +49,8 @@ namespace Shop_Management_System
             LoadComboBoxItems();
             dataGridView2.DataSource = _db.Items.ToList();
             dataGridView1.DataSource = _db.Bills.ToList();
-            
 
         }
-
 
         private void LoadComboBoxItems()
         {
@@ -92,13 +82,10 @@ namespace Shop_Management_System
             bill.Quality = int.Parse(textBox2.Text);
             bill.Total = decimal.Parse(textBoxPrice.Text) * bill.Quality;
 
-
             _db.Bills.Add(bill);
             _db.SaveChanges();
 
             dataGridView1.DataSource = _db.Bills.ToList();
-
-
         }
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -106,6 +93,14 @@ namespace Shop_Management_System
             var selectedItem = dataGridView2.CurrentRow.DataBoundItem as Item;
             textBox1.Text = selectedItem.Name;
             textBoxPrice.Text = selectedItem.Price.ToString();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            comboBox1.Text = "";
+            textBoxPrice.Text = "";
         }
     }
 

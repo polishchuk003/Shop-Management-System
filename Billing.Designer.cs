@@ -230,6 +230,7 @@
             this.button3.TabIndex = 39;
             this.button3.Text = "Reset";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
@@ -358,21 +359,21 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(950, 93);
+            this.panel1.Size = new System.Drawing.Size(1264, 93);
             this.panel1.TabIndex = 25;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(593, 267);
+            this.dataGridView1.Location = new System.Drawing.Point(822, 267);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(345, 344);
+            this.dataGridView1.Size = new System.Drawing.Size(430, 344);
             this.dataGridView1.TabIndex = 43;
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(695, 617);
+            this.button2.Location = new System.Drawing.Point(924, 617);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(143, 31);
             this.button2.TabIndex = 44;
@@ -383,7 +384,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(722, 232);
+            this.label13.Location = new System.Drawing.Point(951, 232);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(87, 21);
             this.label13.TabIndex = 45;
@@ -395,7 +396,7 @@
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox1.Location = new System.Drawing.Point(593, 113);
+            this.groupBox1.Location = new System.Drawing.Point(822, 113);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(345, 113);
             this.groupBox1.TabIndex = 46;
@@ -450,7 +451,7 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(233, 351);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(354, 449);
+            this.dataGridView2.Size = new System.Drawing.Size(583, 449);
             this.dataGridView2.TabIndex = 47;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
@@ -467,7 +468,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(950, 800);
+            this.ClientSize = new System.Drawing.Size(1264, 800);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.dataGridView2);
@@ -490,7 +491,6 @@
             this.Name = "Billing";
             this.Text = "Billing";
             this.Load += new System.EventHandler(this.Billing_Load);
-            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Billing_MouseClick);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

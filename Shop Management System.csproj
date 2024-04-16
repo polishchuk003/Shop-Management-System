@@ -155,11 +155,6 @@
       <DependentUpon>Customers.cs</DependentUpon>
     </Compile>
     <Compile Include="DBContext\DataDbContext.cs" />
-    <Compile Include="HardwareShopDB23DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HardwareShopDB23DataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +178,10 @@
     <Compile Include="Migrations\202404151940240_newDB.cs" />
     <Compile Include="Migrations\202404151940240_newDB.designer.cs">
       <DependentUpon>202404151940240_newDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404161229342_relationship.cs" />
+    <Compile Include="Migrations\202404161229342_relationship.designer.cs">
+      <DependentUpon>202404161229342_relationship.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Bill.cs" />
@@ -215,6 +214,9 @@
     <EmbeddedResource Include="Migrations\202404151940240_newDB.resx">
       <DependentUpon>202404151940240_newDB.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404161229342_relationship.resx">
+      <DependentUpon>202404161229342_relationship.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -225,17 +227,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="appsettings.json" />
-    <None Include="HardwareShopDB23DataSet.xsc">
-      <DependentUpon>HardwareShopDB23DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="HardwareShopDB23DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HardwareShopDB23DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HardwareShopDB23DataSet.xss">
-      <DependentUpon>HardwareShopDB23DataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

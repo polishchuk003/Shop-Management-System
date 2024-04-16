@@ -83,7 +83,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(909, 93);
+            this.panel1.Size = new System.Drawing.Size(1114, 93);
             this.panel1.TabIndex = 0;
             // 
             // label11
@@ -92,7 +92,7 @@
             this.label11.BackColor = System.Drawing.Color.IndianRed;
             this.label11.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(886, 0);
+            this.label11.Location = new System.Drawing.Point(1093, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(21, 21);
             this.label11.TabIndex = 13;
@@ -410,7 +410,7 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(241, 490);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(654, 298);
+            this.dataGridView2.Size = new System.Drawing.Size(861, 298);
             this.dataGridView2.TabIndex = 22;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -418,7 +418,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(909, 800);
+            this.ClientSize = new System.Drawing.Size(1114, 800);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.dataGridView2);

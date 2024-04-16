@@ -1,15 +1,8 @@
 ﻿using Shop_Management_System.DBContext;
 using Shop_Management_System.Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.Entity.Migrations;
-using System.Drawing;
 using System.Linq;
-using System.Management;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Shop_Management_System
@@ -36,7 +29,7 @@ namespace Shop_Management_System
             // Отримуємо всі категорії з бази даних і додаємо їх до Items у comboBox1
             foreach (var category in _db.Categories.ToList())
             {
-               comboBox1.Items.Add(category.Name); // Додаємо об'єкт категорії до випадаючого списку
+                comboBox1.Items.Add(category.Name); // Додаємо об'єкт категорії до випадаючого списку
             }
         }
 

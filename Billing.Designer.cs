@@ -452,6 +452,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(354, 449);
             this.dataGridView2.TabIndex = 47;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // comboBox1
@@ -489,6 +490,7 @@
             this.Name = "Billing";
             this.Text = "Billing";
             this.Load += new System.EventHandler(this.Billing_Load);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Billing_MouseClick);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

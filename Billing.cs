@@ -57,11 +57,10 @@ namespace Shop_Management_System
             LoadComboBoxItems();
             dataGridView2.DataSource = _db.Items.ToList();
             dataGridView1.DataSource = _db.Bills.ToList();
-            var selectedItem = dataGridView2.CurrentRow.DataBoundItem as Item;
-            textBox1.Text = selectedItem.Name;
-            textBoxPrice.Text = selectedItem.Price.ToString();
+            
 
         }
+
 
         private void LoadComboBoxItems()
         {
@@ -100,6 +99,13 @@ namespace Shop_Management_System
             dataGridView1.DataSource = _db.Bills.ToList();
 
 
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var selectedItem = dataGridView2.CurrentRow.DataBoundItem as Item;
+            textBox1.Text = selectedItem.Name;
+            textBoxPrice.Text = selectedItem.Price.ToString();
         }
     }
 

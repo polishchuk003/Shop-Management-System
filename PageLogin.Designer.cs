@@ -1,6 +1,6 @@
 ﻿namespace Shop_Management_System
 {
-    partial class MainPage
+    partial class PageLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PageLogin));
             this.LoginTextBox = new System.Windows.Forms.TextBox();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelCloseWindow = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LoginButton = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
+            this.SignUpLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel2.SuspendLayout();
@@ -64,6 +66,7 @@
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.Size = new System.Drawing.Size(182, 20);
             this.PasswordTextBox.TabIndex = 3;
+            this.PasswordTextBox.UseSystemPasswordChar = true;
             // 
             // label2
             // 
@@ -89,7 +92,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.labelCloseWindow);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -98,16 +101,16 @@
             this.panel1.Size = new System.Drawing.Size(516, 66);
             this.panel1.TabIndex = 7;
             // 
-            // label4
+            // labelCloseWindow
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(496, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(20, 20);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "X";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.labelCloseWindow.AutoSize = true;
+            this.labelCloseWindow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCloseWindow.Location = new System.Drawing.Point(496, 0);
+            this.labelCloseWindow.Name = "labelCloseWindow";
+            this.labelCloseWindow.Size = new System.Drawing.Size(20, 20);
+            this.labelCloseWindow.TabIndex = 9;
+            this.labelCloseWindow.Text = "X";
+            this.labelCloseWindow.Click += new System.EventHandler(this.labelCloseWindow_Click);
             // 
             // pictureBox4
             // 
@@ -150,7 +153,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -171,17 +173,18 @@
             this.LoginButton.TabIndex = 10;
             this.LoginButton.Text = "Login";
             this.LoginButton.UseVisualStyleBackColor = true;
-            this.LoginButton.Click += new System.EventHandler(this.button1_Click);
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
-            // label5
+            // SignUpLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(319, 276);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 16);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Reset all";
+            this.SignUpLabel.AutoSize = true;
+            this.SignUpLabel.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SignUpLabel.Location = new System.Drawing.Point(319, 276);
+            this.SignUpLabel.Name = "SignUpLabel";
+            this.SignUpLabel.Size = new System.Drawing.Size(49, 16);
+            this.SignUpLabel.TabIndex = 11;
+            this.SignUpLabel.Text = "Sign up";
+            this.SignUpLabel.Click += new System.EventHandler(this.SignUpLabel_Click);
             // 
             // label1
             // 
@@ -193,13 +196,18 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "UserName";
             // 
-            // MainPage
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // PageLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(516, 320);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.SignUpLabel);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -207,10 +215,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.LoginTextBox);
             this.Controls.Add(this.label1);
-            this.Name = "MainPage";
+            this.Name = "PageLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MainPage";
-            this.Load += new System.EventHandler(this.MainPage_Load);
+            this.Text = "Login";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -233,10 +240,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelCloseWindow;
         private System.Windows.Forms.Button LoginButton;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label SignUpLabel;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

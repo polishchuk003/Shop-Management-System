@@ -136,86 +136,66 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Billing.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Billing.Designer.cs">
-      <DependentUpon>Billing.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Categories.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Categories.Designer.cs">
-      <DependentUpon>Categories.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Customers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Customers.Designer.cs">
-      <DependentUpon>Customers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DBContext\DataDbContext.cs" />
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MainPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainPage.Designer.cs">
-      <DependentUpon>MainPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202404151057553_InitialCreate.cs" />
-    <Compile Include="Migrations\202404151057553_InitialCreate.designer.cs">
-      <DependentUpon>202404151057553_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202404151303169_changeCaterory.cs" />
-    <Compile Include="Migrations\202404151303169_changeCaterory.designer.cs">
-      <DependentUpon>202404151303169_changeCaterory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202404151940240_newDB.cs" />
-    <Compile Include="Migrations\202404151940240_newDB.designer.cs">
-      <DependentUpon>202404151940240_newDB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202404161229342_relationship.cs" />
-    <Compile Include="Migrations\202404161229342_relationship.designer.cs">
-      <DependentUpon>202404161229342_relationship.cs</DependentUpon>
+    <Compile Include="Migrations\202404171110281_InitialCreate.cs" />
+    <Compile Include="Migrations\202404171110281_InitialCreate.designer.cs">
+      <DependentUpon>202404171110281_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Model\Bill.cs" />
-    <Compile Include="Model\Category.cs" />
-    <Compile Include="Model\Customer.cs" />
-    <Compile Include="Model\Item.cs" />
+    <Compile Include="PageBills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PageBills.Designer.cs">
+      <DependentUpon>PageBills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PageCategories.Designer.cs">
+      <DependentUpon>PageCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PageCustomers.Designer.cs">
+      <DependentUpon>PageCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBContext\DataDbContext.cs" />
+    <Compile Include="PageItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PageItems.Designer.cs">
+      <DependentUpon>PageItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PageLogin.Designer.cs">
+      <DependentUpon>PageLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BillModel.cs" />
+    <Compile Include="Model\CategoryModel.cs" />
+    <Compile Include="Model\CustomerModel.cs" />
+    <Compile Include="Model\ItemModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Billing.resx">
-      <DependentUpon>Billing.cs</DependentUpon>
+    <Compile Include="ToolsForForms\Tools.cs" />
+    <EmbeddedResource Include="Migrations\202404171110281_InitialCreate.resx">
+      <DependentUpon>202404171110281_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Categories.resx">
-      <DependentUpon>Categories.cs</DependentUpon>
+    <EmbeddedResource Include="PageBills.resx">
+      <DependentUpon>PageBills.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customers.resx">
-      <DependentUpon>Customers.cs</DependentUpon>
+    <EmbeddedResource Include="PageCategories.resx">
+      <DependentUpon>PageCategories.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="PageCustomers.resx">
+      <DependentUpon>PageCustomers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainPage.resx">
-      <DependentUpon>MainPage.cs</DependentUpon>
+    <EmbeddedResource Include="PageItems.resx">
+      <DependentUpon>PageItems.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202404151057553_InitialCreate.resx">
-      <DependentUpon>202404151057553_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202404151303169_changeCaterory.resx">
-      <DependentUpon>202404151303169_changeCaterory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202404151940240_newDB.resx">
-      <DependentUpon>202404151940240_newDB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202404161229342_relationship.resx">
-      <DependentUpon>202404161229342_relationship.cs</DependentUpon>
+    <EmbeddedResource Include="PageLogin.resx">
+      <DependentUpon>PageLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

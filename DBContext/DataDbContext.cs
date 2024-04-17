@@ -16,10 +16,10 @@ namespace Shop_Management_System.DBContext
         {
         }
 
-        public DbSet<Item> Items { get; set; }
-        public DbSet<Customer> Customers { get; set; }
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<Bill> Bills { get; set; }
+        public DbSet<ItemModel> Items { get; set; }
+        public DbSet<CustomerModel> Customers { get; set; }
+        public DbSet<CategoryModel> Categories { get; set; }
+        public DbSet<BillModel> Bills { get; set; }
 
 
     }

@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace Shop_Management_System.Model
 {
-    public class Category
+    public class CustomerModel
     {
-        public int CategoryId { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
-        public string Description { get; set; }
-        public List<Item> Items { get; set; }
+        public string Gender { get; set; }
+        public string Phone { get; set; }
+        public virtual List<BillModel> Bills { get; set; }
+
+
     }
 }

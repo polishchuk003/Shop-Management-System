@@ -36,7 +36,15 @@ namespace Shop_Management_System
 
             dataGridViewCategoryList.DataSource = _db.Categories.ToList();
 
-            textBoxCategoryName.Text = "";
+            foreach (Control control in this.Controls)
+            {
+                // Перевірка, чи контрол є текстовим полем
+                if (control is TextBox textBox)
+                {
+                    // Встановлення властивості Text на порожній рядок
+                    textBox.Text = string.Empty;
+                }
+            }
         }
         private void buttonDelete_Click(object sender, EventArgs e)
         {
@@ -65,7 +73,16 @@ namespace Shop_Management_System
 
                 _db.Categories.AddOrUpdate(selectedCategotyForEdit);
                 _db.SaveChanges();
-                textBoxCategoryName.Text = "";
+
+                foreach (Control control in this.Controls)
+                {
+                    // Перевірка, чи контрол є текстовим полем
+                    if (control is TextBox textBox)
+                    {
+                        // Встановлення властивості Text на порожній рядок
+                        textBox.Text = string.Empty;
+                    }
+                }
 
                 dataGridViewCategoryList.DataSource = _db.Categories.ToList();
             }

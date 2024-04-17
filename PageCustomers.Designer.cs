@@ -58,6 +58,7 @@
             this.textBoxPhone = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelCloseWindow = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomersList)).BeginInit();
             this.panel2.SuspendLayout();
@@ -68,6 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCategories)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // comboBoxGender
@@ -85,8 +87,9 @@
             // labelLogout
             // 
             this.labelLogout.AutoSize = true;
+            this.labelLogout.BackColor = System.Drawing.Color.White;
             this.labelLogout.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelLogout.Location = new System.Drawing.Point(105, 639);
+            this.labelLogout.Location = new System.Drawing.Point(105, 32);
             this.labelLogout.Name = "labelLogout";
             this.labelLogout.Size = new System.Drawing.Size(63, 21);
             this.labelLogout.TabIndex = 8;
@@ -95,8 +98,9 @@
             // 
             // pictureBoxLogout
             // 
+            this.pictureBoxLogout.BackColor = System.Drawing.Color.White;
             this.pictureBoxLogout.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogout.Image")));
-            this.pictureBoxLogout.Location = new System.Drawing.Point(12, 614);
+            this.pictureBoxLogout.Location = new System.Drawing.Point(12, 7);
             this.pictureBoxLogout.Name = "pictureBoxLogout";
             this.pictureBoxLogout.Size = new System.Drawing.Size(87, 81);
             this.pictureBoxLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -115,6 +119,8 @@
             // 
             // dataGridViewCustomersList
             // 
+            this.dataGridViewCustomersList.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridViewCustomersList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridViewCustomersList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCustomersList.Location = new System.Drawing.Point(241, 477);
             this.dataGridViewCustomersList.Name = "dataGridViewCustomersList";
@@ -203,7 +209,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel2.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel2.Controls.Add(this.labelItems);
             this.panel2.Controls.Add(this.labelDashboard);
             this.panel2.Controls.Add(this.labelBills);
@@ -214,8 +220,7 @@
             this.panel2.Controls.Add(this.pictureBoxBills);
             this.panel2.Controls.Add(this.pictureBoxCustomers);
             this.panel2.Controls.Add(this.pictureBoxCategories);
-            this.panel2.Controls.Add(this.labelLogout);
-            this.panel2.Controls.Add(this.pictureBoxLogout);
+            this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 93);
             this.panel2.Name = "panel2";
@@ -227,7 +232,7 @@
             this.labelItems.AutoSize = true;
             this.labelItems.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelItems.ForeColor = System.Drawing.Color.White;
-            this.labelItems.Location = new System.Drawing.Point(114, 18);
+            this.labelItems.Location = new System.Drawing.Point(114, 59);
             this.labelItems.Name = "labelItems";
             this.labelItems.Size = new System.Drawing.Size(54, 21);
             this.labelItems.TabIndex = 21;
@@ -239,7 +244,7 @@
             this.labelDashboard.AutoSize = true;
             this.labelDashboard.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelDashboard.ForeColor = System.Drawing.Color.White;
-            this.labelDashboard.Location = new System.Drawing.Point(114, 371);
+            this.labelDashboard.Location = new System.Drawing.Point(114, 412);
             this.labelDashboard.Name = "labelDashboard";
             this.labelDashboard.Size = new System.Drawing.Size(94, 21);
             this.labelDashboard.TabIndex = 18;
@@ -250,7 +255,7 @@
             this.labelBills.AutoSize = true;
             this.labelBills.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelBills.ForeColor = System.Drawing.Color.White;
-            this.labelBills.Location = new System.Drawing.Point(114, 284);
+            this.labelBills.Location = new System.Drawing.Point(114, 325);
             this.labelBills.Name = "labelBills";
             this.labelBills.Size = new System.Drawing.Size(45, 21);
             this.labelBills.TabIndex = 20;
@@ -262,7 +267,7 @@
             this.labelCustomers.AutoSize = true;
             this.labelCustomers.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelCustomers.ForeColor = System.Drawing.Color.White;
-            this.labelCustomers.Location = new System.Drawing.Point(114, 197);
+            this.labelCustomers.Location = new System.Drawing.Point(114, 238);
             this.labelCustomers.Name = "labelCustomers";
             this.labelCustomers.Size = new System.Drawing.Size(94, 21);
             this.labelCustomers.TabIndex = 19;
@@ -273,7 +278,7 @@
             this.labelCategories.AutoSize = true;
             this.labelCategories.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelCategories.ForeColor = System.Drawing.Color.White;
-            this.labelCategories.Location = new System.Drawing.Point(114, 110);
+            this.labelCategories.Location = new System.Drawing.Point(114, 151);
             this.labelCategories.Name = "labelCategories";
             this.labelCategories.Size = new System.Drawing.Size(92, 21);
             this.labelCategories.TabIndex = 17;
@@ -283,7 +288,7 @@
             // pictureBoxItems
             // 
             this.pictureBoxItems.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxItems.Image")));
-            this.pictureBoxItems.Location = new System.Drawing.Point(12, -9);
+            this.pictureBoxItems.Location = new System.Drawing.Point(12, 32);
             this.pictureBoxItems.Name = "pictureBoxItems";
             this.pictureBoxItems.Size = new System.Drawing.Size(87, 81);
             this.pictureBoxItems.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -293,7 +298,7 @@
             // pictureBoxDashboard
             // 
             this.pictureBoxDashboard.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxDashboard.Image")));
-            this.pictureBoxDashboard.Location = new System.Drawing.Point(12, 344);
+            this.pictureBoxDashboard.Location = new System.Drawing.Point(12, 385);
             this.pictureBoxDashboard.Name = "pictureBoxDashboard";
             this.pictureBoxDashboard.Size = new System.Drawing.Size(87, 81);
             this.pictureBoxDashboard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -303,7 +308,7 @@
             // pictureBoxBills
             // 
             this.pictureBoxBills.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBills.Image")));
-            this.pictureBoxBills.Location = new System.Drawing.Point(12, 257);
+            this.pictureBoxBills.Location = new System.Drawing.Point(12, 298);
             this.pictureBoxBills.Name = "pictureBoxBills";
             this.pictureBoxBills.Size = new System.Drawing.Size(87, 81);
             this.pictureBoxBills.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -313,7 +318,7 @@
             // pictureBoxCustomers
             // 
             this.pictureBoxCustomers.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCustomers.Image")));
-            this.pictureBoxCustomers.Location = new System.Drawing.Point(12, 170);
+            this.pictureBoxCustomers.Location = new System.Drawing.Point(12, 211);
             this.pictureBoxCustomers.Name = "pictureBoxCustomers";
             this.pictureBoxCustomers.Size = new System.Drawing.Size(87, 81);
             this.pictureBoxCustomers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -323,7 +328,7 @@
             // pictureBoxCategories
             // 
             this.pictureBoxCategories.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCategories.Image")));
-            this.pictureBoxCategories.Location = new System.Drawing.Point(12, 83);
+            this.pictureBoxCategories.Location = new System.Drawing.Point(12, 124);
             this.pictureBoxCategories.Name = "pictureBoxCategories";
             this.pictureBoxCategories.Size = new System.Drawing.Size(87, 81);
             this.pictureBoxCategories.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -343,7 +348,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(108, 6);
+            this.pictureBox5.Location = new System.Drawing.Point(116, 6);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(111, 81);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -359,7 +364,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.BackColor = System.Drawing.Color.LavenderBlush;
             this.panel1.Controls.Add(this.labelCloseWindow);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.pictureBox5);
@@ -373,12 +378,22 @@
             // 
             this.labelCloseWindow.AutoSize = true;
             this.labelCloseWindow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCloseWindow.Location = new System.Drawing.Point(930, 0);
+            this.labelCloseWindow.Location = new System.Drawing.Point(927, 6);
             this.labelCloseWindow.Name = "labelCloseWindow";
             this.labelCloseWindow.Size = new System.Drawing.Size(20, 20);
             this.labelCloseWindow.TabIndex = 11;
             this.labelCloseWindow.Text = "X";
             this.labelCloseWindow.Click += new System.EventHandler(this.labelCloseWindow_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel3.Controls.Add(this.pictureBoxLogout);
+            this.panel3.Controls.Add(this.labelLogout);
+            this.panel3.Location = new System.Drawing.Point(0, 607);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(227, 100);
+            this.panel3.TabIndex = 58;
             // 
             // PageCustomers
             // 
@@ -414,6 +429,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -449,5 +466,6 @@
         private System.Windows.Forms.Label labelCustomers;
         private System.Windows.Forms.Label labelCategories;
         private System.Windows.Forms.Label labelCloseWindow;
+        private System.Windows.Forms.Panel panel3;
     }
 }

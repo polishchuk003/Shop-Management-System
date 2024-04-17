@@ -66,6 +66,7 @@
             this.comboBoxCustomer = new System.Windows.Forms.ComboBox();
             this.buttonAddToBill = new System.Windows.Forms.Button();
             this.PrintBill = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDashboard)).BeginInit();
@@ -78,6 +79,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBills)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxPrice
@@ -102,7 +104,7 @@
             this.labelItems.AutoSize = true;
             this.labelItems.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelItems.ForeColor = System.Drawing.Color.White;
-            this.labelItems.Location = new System.Drawing.Point(105, 20);
+            this.labelItems.Location = new System.Drawing.Point(105, 65);
             this.labelItems.Name = "labelItems";
             this.labelItems.Size = new System.Drawing.Size(54, 21);
             this.labelItems.TabIndex = 10;
@@ -112,7 +114,7 @@
             // pictureBoxItems
             // 
             this.pictureBoxItems.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxItems.Image")));
-            this.pictureBoxItems.Location = new System.Drawing.Point(12, -5);
+            this.pictureBoxItems.Location = new System.Drawing.Point(12, 40);
             this.pictureBoxItems.Name = "pictureBoxItems";
             this.pictureBoxItems.Size = new System.Drawing.Size(87, 81);
             this.pictureBoxItems.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -123,8 +125,9 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.White;
             this.label9.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(105, 639);
+            this.label9.Location = new System.Drawing.Point(105, 31);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(63, 21);
             this.label9.TabIndex = 8;
@@ -133,8 +136,9 @@
             // 
             // pictureBox6
             // 
+            this.pictureBox6.BackColor = System.Drawing.Color.White;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(12, 614);
+            this.pictureBox6.Location = new System.Drawing.Point(12, 6);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(87, 81);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -146,7 +150,7 @@
             this.labelDashboard.AutoSize = true;
             this.labelDashboard.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelDashboard.ForeColor = System.Drawing.Color.White;
-            this.labelDashboard.Location = new System.Drawing.Point(105, 373);
+            this.labelDashboard.Location = new System.Drawing.Point(105, 418);
             this.labelDashboard.Name = "labelDashboard";
             this.labelDashboard.Size = new System.Drawing.Size(94, 21);
             this.labelDashboard.TabIndex = 4;
@@ -157,7 +161,7 @@
             this.labelBills.AutoSize = true;
             this.labelBills.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelBills.ForeColor = System.Drawing.Color.White;
-            this.labelBills.Location = new System.Drawing.Point(105, 286);
+            this.labelBills.Location = new System.Drawing.Point(105, 331);
             this.labelBills.Name = "labelBills";
             this.labelBills.Size = new System.Drawing.Size(45, 21);
             this.labelBills.TabIndex = 6;
@@ -166,7 +170,7 @@
             // pictureBoxDashboard
             // 
             this.pictureBoxDashboard.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxDashboard.Image")));
-            this.pictureBoxDashboard.Location = new System.Drawing.Point(12, 348);
+            this.pictureBoxDashboard.Location = new System.Drawing.Point(12, 393);
             this.pictureBoxDashboard.Name = "pictureBoxDashboard";
             this.pictureBoxDashboard.Size = new System.Drawing.Size(87, 81);
             this.pictureBoxDashboard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -176,7 +180,7 @@
             // pictureBoxBills
             // 
             this.pictureBoxBills.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBills.Image")));
-            this.pictureBoxBills.Location = new System.Drawing.Point(12, 261);
+            this.pictureBoxBills.Location = new System.Drawing.Point(12, 306);
             this.pictureBoxBills.Name = "pictureBoxBills";
             this.pictureBoxBills.Size = new System.Drawing.Size(87, 81);
             this.pictureBoxBills.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -188,7 +192,7 @@
             this.labelCustomers.AutoSize = true;
             this.labelCustomers.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelCustomers.ForeColor = System.Drawing.Color.White;
-            this.labelCustomers.Location = new System.Drawing.Point(105, 199);
+            this.labelCustomers.Location = new System.Drawing.Point(105, 244);
             this.labelCustomers.Name = "labelCustomers";
             this.labelCustomers.Size = new System.Drawing.Size(94, 21);
             this.labelCustomers.TabIndex = 4;
@@ -198,7 +202,7 @@
             // pictureBoxCustomers
             // 
             this.pictureBoxCustomers.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCustomers.Image")));
-            this.pictureBoxCustomers.Location = new System.Drawing.Point(12, 174);
+            this.pictureBoxCustomers.Location = new System.Drawing.Point(12, 219);
             this.pictureBoxCustomers.Name = "pictureBoxCustomers";
             this.pictureBoxCustomers.Size = new System.Drawing.Size(87, 81);
             this.pictureBoxCustomers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -210,7 +214,7 @@
             this.labelCategories.AutoSize = true;
             this.labelCategories.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelCategories.ForeColor = System.Drawing.Color.White;
-            this.labelCategories.Location = new System.Drawing.Point(105, 112);
+            this.labelCategories.Location = new System.Drawing.Point(105, 157);
             this.labelCategories.Name = "labelCategories";
             this.labelCategories.Size = new System.Drawing.Size(92, 21);
             this.labelCategories.TabIndex = 2;
@@ -242,7 +246,7 @@
             // pictureBoxCategories
             // 
             this.pictureBoxCategories.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCategories.Image")));
-            this.pictureBoxCategories.Location = new System.Drawing.Point(12, 87);
+            this.pictureBoxCategories.Location = new System.Drawing.Point(12, 132);
             this.pictureBoxCategories.Name = "pictureBoxCategories";
             this.pictureBoxCategories.Size = new System.Drawing.Size(87, 81);
             this.pictureBoxCategories.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -288,11 +292,9 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.SlateGray;
+            this.panel2.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel2.Controls.Add(this.labelItems);
             this.panel2.Controls.Add(this.pictureBoxItems);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.pictureBox6);
             this.panel2.Controls.Add(this.labelDashboard);
             this.panel2.Controls.Add(this.labelBills);
             this.panel2.Controls.Add(this.pictureBoxDashboard);
@@ -301,17 +303,18 @@
             this.panel2.Controls.Add(this.pictureBoxCustomers);
             this.panel2.Controls.Add(this.labelCategories);
             this.panel2.Controls.Add(this.pictureBoxCategories);
+            this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 93);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(227, 707);
+            this.panel2.Size = new System.Drawing.Size(227, 706);
             this.panel2.TabIndex = 26;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Yu Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(236, 28);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(417, 35);
@@ -321,7 +324,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(108, 6);
+            this.pictureBox5.Location = new System.Drawing.Point(119, 6);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(111, 81);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -337,21 +340,21 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.SlateGray;
+            this.panel1.BackColor = System.Drawing.Color.LavenderBlush;
             this.panel1.Controls.Add(this.labelCloseWindow);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1264, 93);
+            this.panel1.Size = new System.Drawing.Size(1300, 93);
             this.panel1.TabIndex = 25;
             // 
             // labelCloseWindow
             // 
             this.labelCloseWindow.AutoSize = true;
             this.labelCloseWindow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCloseWindow.Location = new System.Drawing.Point(951, 28);
+            this.labelCloseWindow.Location = new System.Drawing.Point(837, 28);
             this.labelCloseWindow.Name = "labelCloseWindow";
             this.labelCloseWindow.Size = new System.Drawing.Size(20, 20);
             this.labelCloseWindow.TabIndex = 10;
@@ -360,6 +363,7 @@
             // 
             // dataGridViewBills
             // 
+            this.dataGridViewBills.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridViewBills.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewBills.Location = new System.Drawing.Point(822, 267);
             this.dataGridViewBills.Name = "dataGridViewBills";
@@ -434,6 +438,7 @@
             // 
             // dataGridViewItems
             // 
+            this.dataGridViewItems.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridViewItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewItems.Location = new System.Drawing.Point(233, 351);
             this.dataGridViewItems.Name = "dataGridViewItems";
@@ -473,11 +478,21 @@
             this.PrintBill.UseVisualStyleBackColor = true;
             this.PrintBill.Click += new System.EventHandler(this.buttonPrintBill);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel3.Controls.Add(this.pictureBox6);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Location = new System.Drawing.Point(0, 607);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(227, 100);
+            this.panel3.TabIndex = 58;
+            // 
             // PageBills
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 800);
+            this.ClientSize = new System.Drawing.Size(1300, 799);
             this.Controls.Add(this.PrintBill);
             this.Controls.Add(this.buttonAddToBill);
             this.Controls.Add(this.comboBoxCustomer);
@@ -515,6 +530,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -560,5 +577,6 @@
         private System.Windows.Forms.Button buttonAddToBill;
         private System.Windows.Forms.Button PrintBill;
         private System.Windows.Forms.Label labelCloseWindow;
+        private System.Windows.Forms.Panel panel3;
     }
 }

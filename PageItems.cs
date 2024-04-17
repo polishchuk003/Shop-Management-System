@@ -28,10 +28,6 @@ namespace Shop_Management_System
                 comboBoxCategory.Items.Add(category.Name); // Додаємо об'єкт категорії до випадаючого списку
             }
         }
-        private void Form_Clodes(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
         private void buttonEdit_Click(object sender, EventArgs e)
         {
             var selectedItemForEdit = dataGridViewItemsList.CurrentRow.DataBoundItem as ItemModel;
@@ -43,13 +39,6 @@ namespace Shop_Management_System
                 selectedItemForEdit.Stock = int.Parse(textBoxStock.Text);
 
                 selectedItemForEdit.Category.Name = comboBoxCategory.SelectedIndex.ToString();
-
-                //var selectedCategory = comboBox1.SelectedItem as Category;
-                //if (selectedCategory != null)
-                //{
-                //    // Присвоєння вибраної категорії до елемента
-                //    item.Category = selectedCategory;
-                //}
 
                 selectedItemForEdit.Manufacturer = textBoxManufacturer.Text;
 
@@ -74,22 +63,15 @@ namespace Shop_Management_System
 
                 string categoryName = comboBoxCategory.SelectedItem?.ToString();
 
-
                 if (categoryName != null)
                 {
                     var category = _db.Categories.Single(c => c.Name == categoryName);
                     item.Category = category;
                 }
-
-                //item.Category = new Category();
-                //item.Category.Name = comboBox1.SelectedIndex.ToString();
-
-                ////var selectedCategory = comboBox1.SelectedItem as Category;
-                ////if (selectedCategory != null)
-                ////{
-                ////    // Присвоєння вибраної категорії до елемента
-                ////    item.Category = selectedCategory;
-                ////}
+                else
+                {
+                    MessageBox.Show("You need to select a category");
+                }
 
                 item.Manufacturer = textBoxManufacturer.Text;
 
@@ -107,6 +89,7 @@ namespace Shop_Management_System
                         comboBoxCategory.Text = string.Empty;
                     }
                 }
+
                 dataGridViewItemsList.DataSource = _db.Items.ToList();
             }
 
@@ -173,7 +156,10 @@ namespace Shop_Management_System
         {
             this.Close();
             Application.Exit();
-
+        }
+        private void Form_Clodes(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

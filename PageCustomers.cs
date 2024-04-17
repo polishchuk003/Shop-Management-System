@@ -37,9 +37,16 @@ namespace Shop_Management_System
 
             dataGridViewCustomersList.DataSource = _db.Customers.ToList();
 
-            textBoxName.Text = "";
-            textBoxPhone.Text = "";
-            comboBoxGender.Text = "";
+            foreach (Control control in this.Controls)
+            {
+                // Перевірка, чи контрол є текстовим полем
+                if (control is TextBox textBox)
+                {
+                    // Встановлення властивості Text на порожній рядок
+                    textBox.Text = string.Empty;
+                    comboBoxGender.Text = string.Empty;
+                }
+            }
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)

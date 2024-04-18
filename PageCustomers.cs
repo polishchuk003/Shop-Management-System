@@ -9,44 +9,45 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Shop_Management_System.ToolsForForms;
 
 namespace Shop_Management_System
 {
-    public partial class PageCustomers : Form
+    public partial class PageCustomers : BaseForm
     {
-        private DataDbContext _db;
         public PageCustomers()
         {
             InitializeComponent();
-            _db = new DataDbContext();
-
         }
         private void Customers_Load(object sender, EventArgs e)
         {
             dataGridViewCustomersList.DataSource = _db.Customers.ToList();
+            // AutoSizeColumns(dataGridViewCustomersList);
         }
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            var cus = new CustomerModel();
-            cus.Name = textBoxName.Text;
-            cus.Phone = textBoxPhone.Text;
-            cus.Gender = comboBoxGender.SelectedItem.ToString();
+            if (textBoxName.Text == string.Empty ||
+                textBoxPhone.Text == string.Empty ||
+                comboBoxGender.Text == string.Empty)
+            {
+                PrintErrorEmptyField();
+            }
+            else
+            {
+                var cus = new CustomerModel();
+                cus.Name = textBoxName.Text;
+                cus.Phone = textBoxPhone.Text;
+                cus.Gender = comboBoxGender.SelectedItem.ToString();
 
-            _db.Customers.Add(cus);
-            _db.SaveChanges();
+                _db.Customers.Add(cus);
+                _db.SaveChanges();
+
+                ClearTextBoxes();
+                comboBoxGender.Text = string.Empty;
+            }
 
             dataGridViewCustomersList.DataSource = _db.Customers.ToList();
 
-            foreach (Control control in this.Controls)
-            {
-                // Перевірка, чи контрол є текстовим полем
-                if (control is TextBox textBox)
-                {
-                    // Встановлення властивості Text на порожній рядок
-                    textBox.Text = string.Empty;
-                    comboBoxGender.Text = string.Empty;
-                }
-            }
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
@@ -70,25 +71,21 @@ namespace Shop_Management_System
         private void labelItems_Click(object sender, EventArgs e)
         {
             var itemsWindow = new PageItems();
-            itemsWindow.StartPosition = FormStartPosition.CenterScreen;
-            itemsWindow.ShowDialog();
-            this.Close();
+            OpenFormAndCloseCurrent(itemsWindow);
         }
 
         private void labelCategories_Click(object sender, EventArgs e)
         {
             var catWindow = new PageCategories();
-            catWindow.StartPosition = FormStartPosition.CenterScreen;
-            catWindow.ShowDialog();
-            this.Close();
+            OpenFormAndCloseCurrent(catWindow);
+
 
         }
         private void labelBills_Click(object sender, EventArgs e)
         {
             var billingWindow = new PageBills();
-            billingWindow.StartPosition = FormStartPosition.CenterScreen;
-            billingWindow.ShowDialog();
-            this.Close();
+            OpenFormAndCloseCurrent(billingWindow);
+
         }
 
         private void labelCloseWindow_Click(object sender, EventArgs e)
@@ -100,9 +97,18 @@ namespace Shop_Management_System
         private void labelLogout_Click(object sender, EventArgs e)
         {
             var startWindow = new PageLogin();
-            startWindow.StartPosition = FormStartPosition.CenterScreen;
-            startWindow.ShowDialog();
-            this.Close();
+            OpenFormAndCloseCurrent(startWindow);
+
+
+        }
+
+        private void labelDashboard_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelCustomers_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -10,41 +10,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Shop_Management_System.ToolsForForms;
 
 namespace Shop_Management_System
 {
-    public partial class PageCategories : Form
+    public partial class PageCategories : BaseForm
     {
-        private DataDbContext _db;
         public PageCategories()
         {
-            _db = new DataDbContext();
             InitializeComponent();
-
         }
         private void Categories_Load(object sender, EventArgs e)
         {
             dataGridViewCategoryList.DataSource = _db.Categories.ToList();
+            AutoSizeColumns(dataGridViewCategoryList);
         }
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            var newCategory = new CategoryModel();
-            newCategory.Name = textBoxCategoryName.Text;
-
-            _db.Categories.Add(newCategory);
-            _db.SaveChanges();
-
-            dataGridViewCategoryList.DataSource = _db.Categories.ToList();
-
-            foreach (Control control in this.Controls)
+            if (textBoxCategoryName.Text == string.Empty)
             {
-                // Перевірка, чи контрол є текстовим полем
-                if (control is TextBox textBox)
-                {
-                    // Встановлення властивості Text на порожній рядок
-                    textBox.Text = string.Empty;
-                }
+                PrintErrorEmptyField();
             }
+            else
+            {
+                var newCategory = new CategoryModel();
+                newCategory.Name = textBoxCategoryName.Text;
+
+                _db.Categories.Add(newCategory);
+                _db.SaveChanges();
+
+                dataGridViewCategoryList.DataSource = _db.Categories.ToList();
+
+                ClearTextBoxes();
+            }
+
         }
         private void buttonDelete_Click(object sender, EventArgs e)
         {
@@ -74,15 +73,7 @@ namespace Shop_Management_System
                 _db.Categories.AddOrUpdate(selectedCategotyForEdit);
                 _db.SaveChanges();
 
-                foreach (Control control in this.Controls)
-                {
-                    // Перевірка, чи контрол є текстовим полем
-                    if (control is TextBox textBox)
-                    {
-                        // Встановлення властивості Text на порожній рядок
-                        textBox.Text = string.Empty;
-                    }
-                }
+                ClearTextBoxes();
 
                 dataGridViewCategoryList.DataSource = _db.Categories.ToList();
             }
@@ -95,33 +86,26 @@ namespace Shop_Management_System
         private void labelItems_Click(object sender, EventArgs e)
         {
             var itemWindow = new PageItems();
-            itemWindow.StartPosition = FormStartPosition.CenterScreen;
-            itemWindow.ShowDialog();
-            this.Close();
+            OpenFormAndCloseCurrent(itemWindow);
         }
 
         private void labelCustomers_Click(object sender, EventArgs e)
         {
             var customerWindow = new PageCustomers();
-            customerWindow.StartPosition = FormStartPosition.CenterScreen;
-            customerWindow.ShowDialog();
-            this.Close();
+            OpenFormAndCloseCurrent(customerWindow);
+
         }
 
         private void labelBills_Click(object sender, EventArgs e)
         {
             var billingWindow = new PageBills();
-            billingWindow.StartPosition = FormStartPosition.CenterScreen;
-            billingWindow.ShowDialog();
-            this.Close();
+            OpenFormAndCloseCurrent(billingWindow);
+
         }
 
         private void labelDashboard_Click(object sender, EventArgs e)
         {
 
         }
-
-
-
     }
 }

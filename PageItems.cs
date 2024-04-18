@@ -4,21 +4,22 @@ using System;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Windows.Forms;
+using Shop_Management_System.ToolsForForms;
 
 namespace Shop_Management_System
 {
-    public partial class PageItems : Form
+    public partial class PageItems : BaseForm
     {
-        private DataDbContext _db;
         public PageItems()
         {
             InitializeComponent();
-            _db = new DataDbContext();
         }
         private void Login_Load(object sender, EventArgs e)
         {
             LoadComboBoxItems();
             dataGridViewItemsList.DataSource = _db.Items.ToList();
+            dataGridViewItemsList.Columns[5].Visible = false;
+            AutoSizeColumns(dataGridViewItemsList);
         }
         private void LoadComboBoxItems()
         {
@@ -56,10 +57,22 @@ namespace Shop_Management_System
 
         private void buttonAddItem_Click(object sender, EventArgs e)
         {
+            if (textBoxItem.Text == string.Empty ||
+                textBoxPrice.Text == string.Empty ||
+                textBoxStock.Text == string.Empty ||
+                textBoxManufacturer.Text == string.Empty ||
+                comboBoxCategory.Text == string.Empty)
+            {
+                PrintErrorEmptyField();
+
+            }
+            else
+            {
                 var item = new ItemModel();
                 item.Name = textBoxItem.Text;
                 item.Price = int.Parse(textBoxPrice.Text);
                 item.Stock = int.Parse(textBoxStock.Text);
+                item.Manufacturer = textBoxManufacturer.Text;
 
                 string categoryName = comboBoxCategory.SelectedItem?.ToString();
 
@@ -73,25 +86,16 @@ namespace Shop_Management_System
                     MessageBox.Show("You need to select a category");
                 }
 
-                item.Manufacturer = textBoxManufacturer.Text;
-
                 _db.Items.Add(item);
                 _db.SaveChanges();
 
-                // Проходження по всіх елементах у колекції контролів на формі
-                foreach (Control control in this.Controls)
-                {
-                    // Перевірка, чи контрол є текстовим полем
-                    if (control is TextBox textBox)
-                    {
-                        // Встановлення властивості Text на порожній рядок
-                        textBox.Text = string.Empty;
-                        comboBoxCategory.Text = string.Empty;
-                    }
-                }
-
-                dataGridViewItemsList.DataSource = _db.Items.ToList();
+                ClearTextBoxes();
+                comboBoxCategory.Text = string.Empty;
             }
+
+
+            dataGridViewItemsList.DataSource = _db.Items.ToList();
+        }
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
@@ -111,40 +115,24 @@ namespace Shop_Management_System
             }
         }
 
-
-
-
-
-
-        public void TransferWindow()
-        {
-            var billingWindow = new PageBills();
-            billingWindow.StartPosition = FormStartPosition.CenterScreen;
-            billingWindow.ShowDialog();
-            this.Hide();
-        }
         private void labelCategories_Click(object sender, EventArgs e)
         {
             var categoriesWindow = new PageCategories();
-            categoriesWindow.StartPosition = FormStartPosition.CenterScreen;
-            categoriesWindow.ShowDialog();
-            this.Close();
+            OpenFormAndCloseCurrent(categoriesWindow);
         }
 
         private void labelCustomers_Click_1(object sender, EventArgs e)
         {
             var customerWindow = new PageCustomers();
-            customerWindow.StartPosition = FormStartPosition.CenterScreen;
-            customerWindow.ShowDialog();
-            this.Close();
+            OpenFormAndCloseCurrent(customerWindow);
+
         }
 
         private void labelBills_Click(object sender, EventArgs e)
         {
             var billingWindow = new PageBills();
-            billingWindow.StartPosition = FormStartPosition.CenterScreen;
-            billingWindow.ShowDialog();
-            this.Close();
+            OpenFormAndCloseCurrent(billingWindow);
+
         }
 
         private void labelDashboard_Click(object sender, EventArgs e)

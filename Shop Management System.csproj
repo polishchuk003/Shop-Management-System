@@ -178,6 +178,9 @@
     <Compile Include="Model\ItemModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ToolsForForms\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ToolsForForms\Tools.cs" />
     <EmbeddedResource Include="Migrations\202404171110281_InitialCreate.resx">
       <DependentUpon>202404171110281_InitialCreate.cs</DependentUpon>

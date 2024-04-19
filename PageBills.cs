@@ -1,11 +1,8 @@
-﻿using Shop_Management_System.DBContext;
-using Shop_Management_System.Model;
-using System;
-using System.Data.Entity.Migrations;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Windows.Forms;
+﻿using Shop_Management_System.Model;
 using Shop_Management_System.ToolsForForms;
+using System;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace Shop_Management_System
 {
@@ -23,6 +20,9 @@ namespace Shop_Management_System
             dataGridViewBills.DataSource = _db.Bills.ToList();
             dataGridViewBills.Columns[3].Visible = false;
             dataGridViewBills.Columns[5].Visible = false;
+
+            CustomStyleDataGriedView(dataGridViewItems);
+            CustomStyleDataGriedView(dataGridViewBills);
 
             AutoSizeColumns(dataGridViewBills);
             AutoSizeColumns(dataGridViewItems);

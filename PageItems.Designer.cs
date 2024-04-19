@@ -36,8 +36,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelItems = new System.Windows.Forms.Label();
             this.pictureBoxItems = new System.Windows.Forms.PictureBox();
-            this.labelDashboard = new System.Windows.Forms.Label();
-            this.pictureBoxDashboard = new System.Windows.Forms.PictureBox();
             this.labelBills = new System.Windows.Forms.Label();
             this.pictureBoxBills = new System.Windows.Forms.PictureBox();
             this.labelCustomers = new System.Windows.Forms.Label();
@@ -67,7 +65,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxItems)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDashboard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBills)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCustomers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCategories)).BeginInit();
@@ -124,8 +121,6 @@
             this.panel2.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel2.Controls.Add(this.labelItems);
             this.panel2.Controls.Add(this.pictureBoxItems);
-            this.panel2.Controls.Add(this.labelDashboard);
-            this.panel2.Controls.Add(this.pictureBoxDashboard);
             this.panel2.Controls.Add(this.labelBills);
             this.panel2.Controls.Add(this.pictureBoxBills);
             this.panel2.Controls.Add(this.labelCustomers);
@@ -159,28 +154,6 @@
             this.pictureBoxItems.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxItems.TabIndex = 16;
             this.pictureBoxItems.TabStop = false;
-            // 
-            // labelDashboard
-            // 
-            this.labelDashboard.AutoSize = true;
-            this.labelDashboard.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDashboard.ForeColor = System.Drawing.Color.White;
-            this.labelDashboard.Location = new System.Drawing.Point(97, 428);
-            this.labelDashboard.Name = "labelDashboard";
-            this.labelDashboard.Size = new System.Drawing.Size(113, 22);
-            this.labelDashboard.TabIndex = 26;
-            this.labelDashboard.Text = "Dashboard";
-            this.labelDashboard.Click += new System.EventHandler(this.labelDashboard_Click);
-            // 
-            // pictureBoxDashboard
-            // 
-            this.pictureBoxDashboard.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxDashboard.Image")));
-            this.pictureBoxDashboard.Location = new System.Drawing.Point(12, 398);
-            this.pictureBoxDashboard.Name = "pictureBoxDashboard";
-            this.pictureBoxDashboard.Size = new System.Drawing.Size(87, 81);
-            this.pictureBoxDashboard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBoxDashboard.TabIndex = 13;
-            this.pictureBoxDashboard.TabStop = false;
             // 
             // labelBills
             // 
@@ -472,7 +445,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxItems)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDashboard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBills)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCustomers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCategories)).EndInit();
@@ -511,13 +483,11 @@
      //   private HardwareShopDB23DataSet1TableAdapters.ItemsTableAdapter itemsTableAdapter1;
         private System.Windows.Forms.DataGridView dataGridViewItemsList;
         private System.Windows.Forms.PictureBox pictureBoxItems;
-        private System.Windows.Forms.PictureBox pictureBoxDashboard;
         private System.Windows.Forms.PictureBox pictureBoxBills;
         private System.Windows.Forms.PictureBox pictureBoxCustomers;
         private System.Windows.Forms.PictureBox pictureBoxCategories;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label labelItems;
-        private System.Windows.Forms.Label labelDashboard;
         private System.Windows.Forms.Label labelBills;
         private System.Windows.Forms.Label labelCustomers;
         private System.Windows.Forms.Label labelCategories;

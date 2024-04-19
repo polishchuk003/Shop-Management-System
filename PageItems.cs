@@ -1,10 +1,9 @@
-﻿using Shop_Management_System.DBContext;
-using Shop_Management_System.Model;
+﻿using Shop_Management_System.Model;
+using Shop_Management_System.ToolsForForms;
 using System;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Windows.Forms;
-using Shop_Management_System.ToolsForForms;
 
 namespace Shop_Management_System
 {
@@ -19,6 +18,7 @@ namespace Shop_Management_System
             LoadComboBoxItems();
             dataGridViewItemsList.DataSource = _db.Items.ToList();
             dataGridViewItemsList.Columns[5].Visible = false;
+            CustomStyleDataGriedView(dataGridViewItemsList);
             AutoSizeColumns(dataGridViewItemsList);
         }
         private void LoadComboBoxItems()
@@ -132,11 +132,6 @@ namespace Shop_Management_System
         {
             var billingWindow = new PageBills();
             OpenFormAndCloseCurrent(billingWindow);
-
-        }
-
-        private void labelDashboard_Click(object sender, EventArgs e)
-        {
 
         }
 

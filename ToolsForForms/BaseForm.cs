@@ -1,9 +1,5 @@
 ﻿using Shop_Management_System.DBContext;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Shop_Management_System.ToolsForForms
@@ -15,11 +11,10 @@ namespace Shop_Management_System.ToolsForForms
         {
             _db = new DataDbContext();
         }
-
         protected void OpenFormAndCloseCurrent(Form newForm)
         {
             newForm.StartPosition = FormStartPosition.CenterScreen;
-            newForm.Show();
+            newForm.ShowDialog();
             this.Close();
         }
 
@@ -47,6 +42,12 @@ namespace Shop_Management_System.ToolsForForms
         protected void PrintErrorEmptyField()
         {
             MessageBox.Show("Some fields are not filled in!!!");
+        }
+
+        protected void CustomStyleDataGriedView(DataGridView dataGridView)
+        {
+            dataGridView.DefaultCellStyle.Font = new Font("Arial", 10);
+            dataGridView.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 12, FontStyle.Bold);
         }
 
     }

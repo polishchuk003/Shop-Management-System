@@ -181,7 +181,6 @@
     <Compile Include="ToolsForForms\BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ToolsForForms\Tools.cs" />
     <EmbeddedResource Include="Migrations\202404171110281_InitialCreate.resx">
       <DependentUpon>202404171110281_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
@@ -209,7 +208,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="appsettings.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

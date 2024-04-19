@@ -44,12 +44,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelItems = new System.Windows.Forms.Label();
-            this.labelDashboard = new System.Windows.Forms.Label();
             this.labelBills = new System.Windows.Forms.Label();
             this.labelCustomers = new System.Windows.Forms.Label();
             this.labelCategories = new System.Windows.Forms.Label();
             this.pictureBoxItems = new System.Windows.Forms.PictureBox();
-            this.pictureBoxDashboard = new System.Windows.Forms.PictureBox();
             this.pictureBoxBills = new System.Windows.Forms.PictureBox();
             this.pictureBoxCustomers = new System.Windows.Forms.PictureBox();
             this.pictureBoxCategories = new System.Windows.Forms.PictureBox();
@@ -63,7 +61,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomersList)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxItems)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDashboard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBills)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCustomers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCategories)).BeginInit();
@@ -214,12 +211,10 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel2.Controls.Add(this.labelItems);
-            this.panel2.Controls.Add(this.labelDashboard);
             this.panel2.Controls.Add(this.labelBills);
             this.panel2.Controls.Add(this.labelCustomers);
             this.panel2.Controls.Add(this.labelCategories);
             this.panel2.Controls.Add(this.pictureBoxItems);
-            this.panel2.Controls.Add(this.pictureBoxDashboard);
             this.panel2.Controls.Add(this.pictureBoxBills);
             this.panel2.Controls.Add(this.pictureBoxCustomers);
             this.panel2.Controls.Add(this.pictureBoxCategories);
@@ -241,18 +236,6 @@
             this.labelItems.TabIndex = 21;
             this.labelItems.Text = "Items";
             this.labelItems.Click += new System.EventHandler(this.labelItems_Click);
-            // 
-            // labelDashboard
-            // 
-            this.labelDashboard.AutoSize = true;
-            this.labelDashboard.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDashboard.ForeColor = System.Drawing.Color.White;
-            this.labelDashboard.Location = new System.Drawing.Point(98, 431);
-            this.labelDashboard.Name = "labelDashboard";
-            this.labelDashboard.Size = new System.Drawing.Size(113, 22);
-            this.labelDashboard.TabIndex = 18;
-            this.labelDashboard.Text = "Dashboard";
-            this.labelDashboard.Click += new System.EventHandler(this.labelDashboard_Click);
             // 
             // labelBills
             // 
@@ -276,7 +259,6 @@
             this.labelCustomers.Size = new System.Drawing.Size(112, 22);
             this.labelCustomers.TabIndex = 19;
             this.labelCustomers.Text = "Customers";
-            this.labelCustomers.Click += new System.EventHandler(this.labelCustomers_Click);
             // 
             // labelCategories
             // 
@@ -299,16 +281,6 @@
             this.pictureBoxItems.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxItems.TabIndex = 16;
             this.pictureBoxItems.TabStop = false;
-            // 
-            // pictureBoxDashboard
-            // 
-            this.pictureBoxDashboard.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxDashboard.Image")));
-            this.pictureBoxDashboard.Location = new System.Drawing.Point(12, 403);
-            this.pictureBoxDashboard.Name = "pictureBoxDashboard";
-            this.pictureBoxDashboard.Size = new System.Drawing.Size(87, 81);
-            this.pictureBoxDashboard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBoxDashboard.TabIndex = 13;
-            this.pictureBoxDashboard.TabStop = false;
             // 
             // pictureBoxBills
             // 
@@ -431,7 +403,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxItems)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDashboard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBills)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCustomers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCategories)).EndInit();
@@ -465,12 +436,10 @@
         private System.Windows.Forms.TextBox textBoxPhone;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBoxItems;
-        private System.Windows.Forms.PictureBox pictureBoxDashboard;
         private System.Windows.Forms.PictureBox pictureBoxBills;
         private System.Windows.Forms.PictureBox pictureBoxCustomers;
         private System.Windows.Forms.PictureBox pictureBoxCategories;
         private System.Windows.Forms.Label labelItems;
-        private System.Windows.Forms.Label labelDashboard;
         private System.Windows.Forms.Label labelBills;
         private System.Windows.Forms.Label labelCustomers;
         private System.Windows.Forms.Label labelCategories;

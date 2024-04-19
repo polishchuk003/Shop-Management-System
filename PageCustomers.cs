@@ -1,15 +1,8 @@
-﻿using Shop_Management_System.DBContext;
-using Shop_Management_System.Model;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Shop_Management_System.Model;
 using Shop_Management_System.ToolsForForms;
+using System;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace Shop_Management_System
 {
@@ -22,6 +15,8 @@ namespace Shop_Management_System
         private void Customers_Load(object sender, EventArgs e)
         {
             dataGridViewCustomersList.DataSource = _db.Customers.ToList();
+            CustomStyleDataGriedView(dataGridViewCustomersList);
+
             // AutoSizeColumns(dataGridViewCustomersList);
         }
         private void buttonAdd_Click(object sender, EventArgs e)
@@ -99,16 +94,6 @@ namespace Shop_Management_System
             var startWindow = new PageLogin();
             OpenFormAndCloseCurrent(startWindow);
 
-
-        }
-
-        private void labelDashboard_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelCustomers_Click(object sender, EventArgs e)
-        {
 
         }
     }

@@ -42,7 +42,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LoginButton = new System.Windows.Forms.Button();
-            this.SignUpLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1.SuspendLayout();
@@ -179,18 +178,6 @@
             this.LoginButton.UseVisualStyleBackColor = false;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
-            // SignUpLabel
-            // 
-            this.SignUpLabel.AutoSize = true;
-            this.SignUpLabel.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SignUpLabel.ForeColor = System.Drawing.Color.Crimson;
-            this.SignUpLabel.Location = new System.Drawing.Point(316, 304);
-            this.SignUpLabel.Name = "SignUpLabel";
-            this.SignUpLabel.Size = new System.Drawing.Size(68, 19);
-            this.SignUpLabel.TabIndex = 11;
-            this.SignUpLabel.Text = "Sign up";
-            this.SignUpLabel.Click += new System.EventHandler(this.SignUpLabel_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -212,7 +199,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(532, 359);
-            this.Controls.Add(this.SignUpLabel);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -250,7 +236,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label labelCloseWindow;
         private System.Windows.Forms.Button LoginButton;
-        private System.Windows.Forms.Label SignUpLabel;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;

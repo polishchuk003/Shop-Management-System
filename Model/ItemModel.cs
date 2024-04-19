@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Shop_Management_System.Model
+﻿namespace Shop_Management_System.Model
 {
     public class ItemModel
     {
@@ -15,10 +9,6 @@ namespace Shop_Management_System.Model
         public string Manufacturer { get; set; }
         public virtual CategoryModel Category { get; set; }
         public int CategoryId { get; set; }
-
-
-
-
 
     }
 }
